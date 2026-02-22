@@ -142,7 +142,17 @@
                 font-family: cursive;
             }
 
+            .accept-box{
+                background: #000000;
+                border-radius: 20px;
+                padding: 20px;
+                margin-top: 30px;
+                box-shadow: 0px 0px 12px rgba(10, 120, 183, 1);
+                text-align: center;
+                
 
+
+            }
 
         </style>
 
@@ -151,9 +161,9 @@
             <div class="resgitration form">
 
                 <!-- LEFT SIDE -->
-                <div class="row g-0">
+                <div class="row g-0 justify-content-center">
                     
-                    <div class="upload-image d-flex flex-column align-items-center justify-content-center col-md-5">
+                    <div class="upload-image d-flex flex-column align-items-center justify-content-center col-md-2">
 
                     <center><img class="default-pfp" src="Default pfp.jpg" style="width: 175px; margin-bottom: 20px;">
                     <input type="file" class="file-input w-75"></center>
@@ -162,15 +172,15 @@
                 
 
                 <!-- RIGHT SIDE -->
-                <div class="form-itself col-md-7 p-4">
+                <div class="form-itself col-md-4 p-4 justify-content-center">
 
                     <h2 class="registration-text">Registration ☆</h2>
 
                     <!-- FORM -->
 
-                <form>
+                <form class="justify-content-center">
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
 
             
                     <center><input type="name" class="form-control" id="name"
@@ -208,7 +218,7 @@
                 </form>
 
             <!-- CHECKBOXES -->
-            <div class="form-itself checkbox container-fluid">
+            <div class="accept-box checkbox container-fluid col-md-7">
                 <label class="form-check-label">
                     <input class="form-check-input" type="checkbox" name="mode" style="color: white; font-family: cursive;"> I accept the Terms of Use and Privacy Policy
                 </label><br>
