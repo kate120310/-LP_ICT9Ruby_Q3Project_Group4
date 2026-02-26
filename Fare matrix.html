@@ -1,226 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Hello Kitty's Fare Guide ☆ </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- NAVBAR STYLE -->
-        <style>
+<title>Hello Kitty's Fare Guide ☆</title>
 
-        body{background-image: url(polka\ dot.jpg);backdrop-filter: blur(5p);
-        background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed; }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<style>
 
-        button{
-            background-color: #de0033;
-            font-family: cursive;
-            border-color: white;
-            
+body{
+    background: url("polka dot.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: cursive;
+}
 
-        }
 
-        .navbar{
-            background: #000000;
+/* NAVBAR */
 
-        }
+.navbar{
+    background: black;
+}
 
-        .booknow{
-            text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+.createacc{
+    background: #de0033;
+    border: none;
+}
 
-        }
 
-        .nav-item{
-            text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
-        }
+/* CONTAINERS */
 
-        .createacc{
-            background: #de0033;
-            border-color: #de0033;
-            font-family: cursive;
+.main-box{
+    margin-top: 60px;
+}
 
-        }
-        
+.fare-container{
+    background: black;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+}
 
-        </style>
+.result-container{
+    background: #081f3f;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+}
 
-    <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-sm navbar-light ">
 
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="hello kitty vroom vroom.png" alt="logo" height="67px"> </a>
+/* BUTTONS */
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" style="color: white;">
-                    <span class="navbar-toggler-icon" style="color: white;"> </span>
-                </button>
+.reg-btn{
+    background: #de0033;
+    border: none;
+    width: 180px;
+}
 
-                <div class="collapse navbar-collapse" id="mynavbar">
+.dis-btn{
+    background: #0a78b7;
+    border: none;
+    width: 180px;
+}
 
-                <!-- Navbar buttons (don't forget to replace # with the links!) -->
-                   <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" style="color: white; font-family: cursive;" > Home </a>  
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Fare matrix.html" style="color: white; font-family: cursive;"> Fare Matrix </a>  
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: white; font-family: cursive;"> Schedule </a>  
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: white; font-family: cursive;"> Help </a>  
-                        </li>
 
-                   </ul> 
+/* FOOTER */
 
-                <!-- Book now & create acc (don't forget to replace # with the links!)-->
-                   <div class="d-flex align-items-center gap-3">
-                    <a href="Fare matrix.html" class="booknow text-white" style="font-family: cursive;">Book now!☆</a>
+.footer{
+    background: #de0033;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 60px;
+}
 
-                    <a href="Registration page.html" class="createacc btn btn-primary px-3">Create Account</a>
-
-                   </div>
-
-                   </div>
-                </div>
-            </nav>
-
-
-    <!-- MAIN CONTAINER STYLE -->
-        <style>
-
-            .fare-container{
-                background: #000000;
-                font-family: cursive;
-                text-shadow: 0px 0px 12px rgba(10, 120, 183, 1);
-                padding: 20px;
-                margin-top: 30px;
-                border-radius: 20px;
-                color: white;
-                text-align: center;
-                width: 500px;
-                align-self: center;
-
-            }
-           
-            .texthighlight{
-                color: #de0033;
-
-            }
-
-            .regular-fare{
-                background-color: #de0033;
-                border: #de0033;
-                box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
-                width: 200px;
-
-            }
-
-            .discounted-fare{
-                background-color: #0a78b7;
-                border: #0a78b7;
-                box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
-                width: 200px;
-
-            }
-
-        </style>
-
-    <!-- MAIN CONTAINER -->
-
-            <div class="farematrix">
-
-                <!-- HEADER -->
-                <div class="fare-container justify-content-center">
-                    <h1><span class="texthighlight">Hello Kitty's</span> Fare Matrix! ☆</h1>
-
-                    <!-- PICK UP LOCATION -->
-                    <h5 style="margin-top: 15px;">PICK-UP LOCATION:</h5>
-
-                    <center><select class="form-control mb-3 w-auto justify-content-center id="pickup">
-                        <option value="0"> Choose location 🛵 </option>
-                            <option value="50"> Roosevelt </option>
-                                <option value="50"> Santolan </option>
-                                    <option value="50"> North Avenue </option>
-                                         
-
-                    </select></center>
-
-                    <!-- DROP OFF LOCATION -->
-                    <h5>DROP-OFF LOCATION:</h5>
-
-                    <center><select class="form-control mb-3 w-auto justify-content-center" id="pickup">
-                        <option value="0"> Choose location 🗺️ </option>
-                            <option value="50"> Baclaran </option>
-                                <option value="50"> Recto </option>
-                                    <option value="50"> Taft Avenue </option>
-                                         
-
-                    </select></center>
-                
-                <!-- BUTTONS -->
-                <div class="fare-btn d-flex justify-content-center gap-3 mt-4">
-                    <button class="regular-fare btn btn-success w-auto " onclick="computetotal()">
-                        Regular Fare
-                    </button>
-
-                    <button class="discounted-fare btn btn-success w-auto" onclick="computetotal()">
-                        Discounted Fare
-                    </button>
-
-                </div>
-
-
-
-                </div>
-
-
-
-
-
-
-            </div>
-
-    <!-- FOOTER STYLE -->
-        <style>
-
-            .footer{
-                background: #de0033 ;
-                text-align: center;
-                padding: 20px;
-                width: 100%;
-                font-family: cursive;
-                margin-top: 50px;
-                text-shadow: 0px 0px 12px rgba(10, 120, 183, 1);
-
-            }
-
-            .footer-text{
-                color: white;
-            }
-
-
-        </style>
-
-
-    <!-- FOOTER -->
-
-            <footer class="footer">
-
-                <p class="footer-text">Abion, Valencia, Velo | 9 - Ruby ©2026</p>
-            
-            </footer>
-    
-
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-      
-
+</style>
 
 </head>
+
+
+
 <body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-sm navbar-dark">
+
+<div class="container-fluid">
+
+<a class="navbar-brand text-white" href="#">
+    <img src="hello kitty vroom vroom.png" height="60">
+</a>
+
+<ul class="navbar-nav me-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Fare Matrix</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Help</a>
+</li>
+
+</ul>
+
+<a href="#" class="btn createacc text-white">Create Account</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- MAIN CONTENT -->
+
+<div class="container main-box">
+
+<div class="row justify-content-center gap-4">
+
+
+<!-- LEFT CONTAINER -->
+
+<div class="col-md-5">
+
+<div class="fare-container">
+
+<h2>Hello Kitty's Fare Matrix ☆</h2>
+
+
+<h5 class="mt-3">PICK-UP LOCATION</h5>
+
+<select class="form-control mb-3" id="pickup">
+
+<option value="0">Choose Location</option>
+
+<option value="10">Roosevelt</option>
+<option value="20">Santolan</option>
+<option value="30">North Avenue</option>
+
+</select>
+
+
+<h5>DROP-OFF LOCATION</h5>
+
+<select class="form-control mb-3" id="dropoff">
+
+<option value="0">Choose Location</option>
+
+<option value="40">Baclaran</option>
+<option value="50">Recto</option>
+<option value="60">Taft Avenue</option>
+
+</select>
+
+
+<div class="d-flex justify-content-center gap-3 mt-3">
+
+<button class="btn reg-btn text-white"
+onclick="computeFare(false)">
+
+Regular Fare
+
+</button>
+
+
+<button class="btn dis-btn text-white"
+onclick="computeFare(true)">
+
+Discounted Fare
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RIGHT CONTAINER -->
+
+<div class="col-md-5">
+
+<div class="result-container">
+
+<h2>Fare Result</h2>
+
+<hr>
+
+
+<h4>Distance:</h4>
+<p id="distance">0 km</p>
+
+
+<h4>Fare Amount:</h4>
+<h1 id="fare">₱0.00</h1>
+
+
+<p class="mt-3" id="type">No fare selected</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<p>Abion, Valencia, Velo | 9 - Ruby ©2026</p>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+
+// Fare Variables
+let baseFare = 50;
+let perKMRate = 15;
+let baseKM = 2;
+
+
+// Main Function
+function computeFare(isDiscounted){
+
+    let pickup = Number(document.getElementById("pickup").value);
+    let dropoff = Number(document.getElementById("dropoff").value);
+
+
+    // Validation
+    if(pickup === 0 || dropoff === 0){
+
+        alert("Please select both locations!");
+        return;
+
+    }
+
+
+    // Distance Calculation
+    let distance = Math.abs(dropoff - pickup) / 10;
+
+
+    // Base Fare
+    let total = baseFare;
+
+
+    // Extra KM
+    if(distance > baseKM){
+
+        let extra = distance - baseKM;
+
+        total += extra * perKMRate;
+
+    }
+
+
     
+    if(isDiscounted){
+
+        total = total * 0.8;
+
+    }
+
+
+    
+    total = Math.round(total * 100) / 100;
+
+
+  
+    document.getElementById("distance").innerHTML =
+        distance + " km";
+
+    document.getElementById("fare").innerHTML =
+        "₱" + total.toFixed(2);
+
+
+    if(isDiscounted){
+
+        document.getElementById("type").innerHTML =
+        "Discounted Fare (20% off)";
+
+    }else{
+
+        document.getElementById("type").innerHTML =
+        "Regular Fare";
+
+    }
+
+}
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
